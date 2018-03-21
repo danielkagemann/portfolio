@@ -8,23 +8,27 @@
     </ul>
 
     <div class="message">
+      <Trails/>
       Daniel Kagemann<br/>
-      <vue-typer :text="['ui/ux developer','father','apple fanboy','comicnerd']"
-                 preTypeDelay="1000"
+      <vue-typer :text="['ui/ux design','father','apple fanboy','front-end development', 'comicnerd', 'mobile development']"
+                 :preTypeDelay="1000"
                  :pre-erase-delay='2000'
                  :erase-delay='1000'
                  caretAnimation="smooth"></vue-typer>
     </div>
+
   </div>
 </template>
 
 <script>
   import {VueTyper} from 'vue-typer'
+  import Trails from './components/Trails'
 
   export default {
     name: 'App',
     components: {
-      VueTyper
+      VueTyper,
+      Trails
     }
   }
 </script>
@@ -85,7 +89,7 @@
 
   .cb-slideshow:after {
     content: '';
-    background: transparent url(./assets/pattern.png) repeat top left;
+    background: transparent url(../static/images/pattern.png) repeat top left;
   }
 
   .cb-slideshow li span {
@@ -108,11 +112,11 @@
   }
 
   .cb-slideshow li:nth-child(1) span {
-    background-image: url(./assets/work.jpg)
+    background-image: url(../static/images/work.jpg)
   }
 
   .cb-slideshow li:nth-child(2) span {
-    background-image: url(./assets/father.jpg);
+    background-image: url(../static/images/father.jpg);
     -webkit-animation-delay: 7s;
     -moz-animation-delay: 7s;
     -o-animation-delay: 7s;
@@ -121,7 +125,7 @@
   }
 
   .cb-slideshow li:nth-child(3) span {
-    background-image: url(./assets/clinic.jpg);
+    background-image: url(../static/images/clinic.jpg);
     -webkit-animation-delay: 14s;
     -moz-animation-delay: 14s;
     -o-animation-delay: 14s;
