@@ -10,31 +10,36 @@
 <script>
   export default {
     name: 'Trails',
-    data() {
+    data () {
       return {
         list: [
           {
             icon: 'fa-github',
+            name: 'github',
             link: 'https://github.com/danielkagemann',
             isClass: true
           },
           {
             icon: 'fa-facebook',
+            name: 'facebook',
             link: 'https://www.facebook.com/corefault',
             isClass: true
           },
           {
             icon: 'fa-xing',
+            name: 'Xing',
             link: 'https://www.xing.com/profile/Daniel_Kagemann',
             isClass: true
           },
           {
             icon: 'fa-codepen',
+            name: 'Codepen',
             link: 'https://codepen.io/danielkagemann',
             isClass: true
           },
           {
             icon: 'static/images/epi.png',
+            name: 'EpilepsieTagebuch!',
             link: 'http://hallo-ich-bin-epi.de',
             isClass: false
           }
@@ -48,20 +53,22 @@
   .trails {
     color: #fff;
     font-size: 28px;
-    position:fixed;
-    bottom:0;
-    left:0;
     width:100%;
+    position:absolute;
+    bottom:20px;
+    left:40px;
   }
 
-  .trails a, .trails img {
-    color: #fff;
+  .trails a {
+    color: #000;
     text-decoration: none;
-    padding: 10px;
+    padding:10px;
   }
 
   .trails img {
     height:40px;
     vertical-align: middle;
   }
+
+
 </style>
