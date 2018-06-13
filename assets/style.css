@@ -1,0 +1,75 @@
+.window {
+    width: 80%;
+    margin: 20px auto;
+    display: block;
+}
+
+.window .content {
+    padding: 10px;
+    background-color: #333333;
+    border-radius: 0 0 8px 8px;
+    font-family: monospace;
+    color: #fff;
+    width: 100%;
+    height:300px;
+    overflow-y:auto;
+}
+
+.window .content .prompt {
+    font-weight: 300;
+}
+
+.window .content .prompt:before {
+    content: "$ ";
+    font-weight: bold;
+}
+
+.window .content .prompt .cursor {
+    padding-left:5px;
+    border-right:8px solid #fff;
+}
+
+.window .content .answer {
+    color: #c5c5c5;
+}
+
+.window .content .answer strong {
+    color:#e5e5e5;
+    font-weight:bolder;
+}
+
+.window .bar {
+    width: 100%;
+    background-color: #e5e5e5;
+    padding: 10px;
+    border-radius: 8px 8px 0 0;
+}
+
+.window .bar .title {
+    width:calc(100% - 70px);
+    text-align:center;
+    font-size:12px;
+    font-family: arial,sans-serif;
+    display:inline-block;
+}
+
+.window .bar .btn {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    cursor:pointer;
+}
+
+.window .bar .btn.close {
+    background-color: #ed6c61;
+}
+
+.window .bar .btn.minimize {
+    background-color: #f5bf4f;
+}
+
+.window .bar .btn.maximize {
+    background-color: #62c554;
+}
+
