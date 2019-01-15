@@ -1,3 +1,31 @@
+function RemoveType(selector, opts) {
+   var speed = opts.speed || 100;
+   var cb = opts.finish || function () {
+   };
+   var obj = document.querySelector(selector);
+   var val = obj.innerHTML;
+   var index = val.length - 1;
+   var handle = setInterval(function () {
+      // check for HTML tags to ignore them
+      if (val.charAt(index) === ">") {
+         for (var ig = index -1 ; ig >= 0; ig--) {
+            if (val.charAt(ig) === "<") {
+               index = ig - 1;
+               break;
+            }
+         }
+      }
+
+      if (--index <= 0) {
+         obj.innerHTML = '';
+         clearInterval(handle);
+         cb();
+      } else {
+         obj.innerHTML = (val.substring(0, index - 1));
+      }
+   }, speed);
+}
+
 function Typer(selector, opts) {
    var val = opts.text || '';
    var speed = opts.speed || 100;

@@ -1,83 +1,75 @@
-.window {
-    width: 80%;
-    margin: 20px auto;
-    display: block;
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville');
+
+html {
+    min-height:100vh;
+    width:100%;
+    max-width: 100vw;
+    font-family: 'Libre Baskerville', serif;
 }
 
-.window .content {
-    padding: 10px;
-    background-color: #333333;
-    border-radius: 0 0 8px 8px;
-    font-family: monospace;
-    color: #fff;
-    width: 100%;
-    height:350px;
-    overflow-y:auto;
+.animated {
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background-image: url(assets/bg.gif);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    -webkit-background-size: cover;
+    background-size: cover;
+    opacity: 0.4;
+
 }
 
-.window .content .prompt {
-    font-weight: 300;
+.btn {
+    width:32px;
+    height:32px;
+    background-color:rgba(128,128,128,0.5);
+    color:#fff;
+    position:absolute;
+    top:50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    text-align:center;
+    padding:10px;
+    line-height: 2;
+
+    display:none;
 }
 
-.window .content .prompt:before {
-    content: "$ ";
-    font-weight: bold;
+.btn.prev {
+    left:0;
+}
+.btn.next {
+    right:0;
 }
 
-.window .content .prompt .cursor {
-    padding-left:5px;
-    border-right:8px solid #fff;
+.page {
+    font-size:28px;
+    font-weight:300;
+    width: 50%;
+    min-width:350px;
+    max-width:600px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 20px;
+    overflow: auto;
+    resize: none;
 }
 
-.window .content a {
-    color:#c5c5c5;
+.page a {
+    color: #c51762;
     text-decoration: none;
 }
-.window .content a:hover {
-    text-decoration: underline;
-}
 
-.window .content .answer {
-    color: #c5c5c5;
-}
-
-.window .content .answer strong {
-    color:#e5e5e5;
-    font-weight:bolder;
-}
-
-.window .bar {
-    width: 100%;
-    background-color: #e5e5e5;
-    padding: 10px;
-    border-radius: 8px 8px 0 0;
-}
-
-.window .bar .title {
-    width:calc(100% - 70px);
-    text-align:center;
-    font-size:12px;
-    font-family: arial,sans-serif;
-    display:inline-block;
-}
-
-.window .bar .btn {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    display: inline-block;
-    cursor:pointer;
-}
-
-.window .bar .btn.close {
-    background-color: #ed6c61;
-}
-
-.window .bar .btn.minimize {
-    background-color: #f5bf4f;
-}
-
-.window .bar .btn.maximize {
-    background-color: #62c554;
+.page img {
+    width:32px;
+    vertical-align: bottom;
 }
 
